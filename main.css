@@ -1,0 +1,542 @@
+@font-face {
+	font-family: 'ChocolateBox';
+	src: url('fonts/chocolatebox.eot');
+	src: local('☺'), url('fonts/chocolatebox.woff') format('woff'), url('fonts/chocolatebox.ttf') format('truetype'), url('fonts/chocolatebox.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	transition: 100ms all;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: ChocolateBox, Arial, sans-serif;
+	color: white;
+	background-color: black;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.button {
+	padding: 15px 50px;
+	font-weight: 500;
+	font-size: 19px;
+	display: inline-block;
+	transition: 200ms all;
+}
+
+.button.primary {
+	background-color: #E2B024;
+	color: #18191A;
+	border: 1px solid #18191A;
+}
+
+.button.silver {
+	background-color: #18191A;
+	color: #fff;
+	border: 1px solid #E2B024;
+}
+
+.button.primary:hover {
+	background-color: #18191A;
+	color: #fff;
+	border: 1px solid #E2B024;
+}
+
+.button.silver:hover {
+	background-color: #E2B024;
+	color: #18191A;
+}
+
+.container {
+	width: 1120px;
+	margin: 0 auto;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	font-family: Poppins;
+	padding: 20px 0;
+}
+
+.header-nav div:nth-child(2) {
+	margin-left: 110px;
+}
+
+.header-nav img {
+	cursor: pointer;
+}
+
+.header-nav-cont {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 355px;
+}
+
+.header-skip {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+	border-top: 1px solid #aeb0b2;
+	border-bottom: 1px solid #aeb0b2;
+	padding: 11px 0 10px 0;
+	height: 20px;
+}
+
+.header-skip a {
+	transition: 200ms all;
+	border-bottom: 1px solid #000;
+}
+
+.header-skip a:hover {
+	color: #E2B024;
+	border-bottom: 1px solid #E2B024;
+}
+
+.header-content {
+	margin: 0 auto;
+	margin-top: 100px;
+	text-align: center;
+	padding: 10px 0;
+	width: 752px;
+}
+
+.header-content div:nth-child(1) {
+	font-size: 24px;
+}
+
+.header-content div:nth-child(2) {
+	font-size: 96px;
+}
+
+.header-content div:nth-child(2) span {
+	color: #E2B024;
+}
+
+.header-content div:nth-child(3) {
+	font-size: 16px;
+	font-family: Poppins;
+	margin-bottom: 30px;
+}
+
+.header-content a:nth-child(4) {
+	font-size: 16px;
+	cursor: pointer;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	transition: 200ms;
+}
+
+.header-content a:nth-child(4):hover {
+	color: #E2B024;
+	border-bottom: 1px solid #E2B024;
+}
+
+.header-img {
+	display: flex;
+	justify-content: center;
+	height: 480px;
+}
+
+.swiper-pagination {
+	display: none;
+}
+
+.wines {
+	font-family: Poppins;
+	background-color: #18191A;
+}
+
+.wines-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 200px 0;
+}
+
+.wine-swipe__container {
+	display: flex;
+	justify-content: center;
+}
+
+.wines-content-first {
+	width: 526px;
+}
+
+.wines-content-first div:nth-child(1) {
+	font-size: 20px;
+	letter-spacing: 6px;
+	margin-bottom: 35px;
+}
+
+.wines-content-first div:nth-child(2) {
+	font-family: ChocolateBox;
+	font-size: 74px;
+	color: #E2B024;
+}
+
+.wines-content-first div:nth-child(3) {
+	font-size: 36px;
+}
+
+.wines-content-first p:nth-child(4) {
+	font-weight: lighter;
+	font-size: 18px;
+	line-height: 40px;
+	margin: 34px 0;
+}
+
+.wines-buttons {
+	width: 485px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.second-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 8px solid #E2B024;
+	width: 530px;
+	height: 435px;
+}
+
+.second-box:before {
+	position: absolute;
+	content: '';
+	background-image: url("img/wines.png");
+	background-size: 210px 590px;
+	background-repeat: no-repeat;
+	width: 210px;
+	height: 590px;
+}
+
+.wines-content-second {
+	position: relative;
+}
+
+.wines-content-second:before {
+	position: absolute;
+	content: 'Prev';
+	background-color: #18191A;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+	top: 217px;
+	left: -12px;
+}
+
+.wines-content-second:after {
+	position: absolute;
+	content: 'After';
+	background-color: #18191A;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+	bottom: 211px;
+	right: -14px;
+}
+
+.products {
+	padding: 150px 0;
+}
+
+.products-header {
+	font-size: 48px;
+	text-align: center;
+}
+
+.products-header span {
+	color: #E2B024;
+}
+
+.products-nav, .products-nav div {
+	display: flex;
+}
+
+.products-nav {
+	font-family: Poppins;
+	font-size: 19px;
+	justify-content: center;
+	margin: 80px 0;
+	transition: 200ms all;
+}
+
+.products-nav div {
+	justify-content: space-between;
+	width: 300px;
+	border-bottom: 1px solid #fff;
+}
+
+.products-nav a:hover {
+	color: #E2B024;
+}
+
+.products-column {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wine-img {
+	width: 148px;
+	height: 355px;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+
+.second-column {
+	margin-top: 80px;
+}
+
+.first {
+	background-image: url("img/wines/silverOak.png");
+}
+
+.second {
+	margin-left: 11px;
+	background-image: url("img/wines/wooden.png");
+}
+
+.third {
+	background-image: url("img/wines/redHills.png");
+}
+
+.fourth {
+	margin-left: 33px;
+	background-image: url("img/wines/cabernet.png");
+}
+
+.fifth {
+	background-image: url("img/wines/mazzei.png");
+}
+
+.sixth {
+	background-image: url("img/wines/penfolds.png");
+}
+
+.seventh {
+	margin-left: 10px;
+	background-image: url("img/wines/jacobs.png");
+}
+
+.eighth {
+	margin-right: 19px;
+	background-image: url("img/wines/wooden.png");
+}
+
+.pr-wine {
+	position: relative;
+}
+
+.wine-name, .wine-price {
+	font-size: 24px;
+}
+
+.wine-price, .product-offer {
+	font-family: Poppins;
+}
+
+.product-offer {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 76px;
+	height: 38px;
+	font-size: 14px;
+	color: #000;
+	background-color: #E2B024;
+	left: -50px;
+	top: 20px;
+}
+
+.wine-price span {
+	font-size: 16px;
+	color: #E2B024;
+	text-decoration: line-through;
+}
+
+.product-txt {
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+	color: #E2B024;
+}
+
+.product-txt a {
+	border-bottom: 1px solid #fff;
+}
+
+.product-txt a:hover {
+	color: #E2B024;
+	border-bottom: 1px solid #E2B024;
+}
+
+.wineSwipe {
+	padding: 0 0 120px;
+}
+
+.wineSwipe-text {
+	text-align: center;
+	font-size: 48px;
+}
+
+.wineSwipe-text span {
+	color: #E2B024;
+}
+
+.wineSwipe-content {
+	padding: 80px 0 50px 0;
+}
+
+.wineSwipe-image img {
+	position: relative;
+	width: 250px;
+}
+
+.wineSwipe-offer {
+	position: absolute;
+	bottom: 14px;
+	left: 10px;
+}
+
+.wineSwipe-offer-name {
+	font-size: 19px;
+}
+
+.wineSwipe-offer-price {
+	font-family: Poppins;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.swiper-container {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	overflow: hidden;
+	margin: 0;
+}
+
+.swiper-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.swiper-pagination span {
+	background-color: #E2B024;
+}
+
+.letter {
+	background-color: #18191A;
+	padding: 60px 0;
+}
+
+.letter-text {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.letter-text div {
+	font-size: 46px;
+	color: #E2B024;
+}
+
+.letter-text p {
+	font-family: Poppins;
+	font-size: 18px;
+}
+
+.letter-action {
+	display: flex;
+	justify-content: center;
+}
+
+.input, .letter-button {
+	outline: none;
+	border: none;
+}
+
+.input {
+	color: #fff;
+	width: 450px;
+	background-color: black;
+	padding: 20px 30px;
+	font-size: 18px;
+}
+
+.letter-button {
+	cursor: pointer;
+	padding: 0 20px;
+	background-color: #E2B024;
+	font-size: 18px;
+}
+
+.last {
+	padding: 70px 0;
+}
+
+.last-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.last-block-name {
+	font-size: 24px;
+	color: #E2B024;
+	margin-bottom: 30px;
+}
+
+.last-links a {
+	font-family: Poppins;
+	display: block;
+	margin-top: 7px;
+}
+
+.last-block-links {
+	width: 225px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.last-block-links img {
+	cursor: pointer;
+}
+
+.last-contacts {
+	font-family: Poppins;
+}
+
+.last-contacts-block {
+	display: flex;
+	align-items: center;
+	margin-top: 16px;
+}
+
+.last-contacts-block img {
+	margin-right: 10px;
+}
+
+.last-contacts-block a {
+	font-weight: lighter;
+}
+
+.end {
+	font-family: Poppins;
+	margin-top: 20px;
+	padding: 30px 0 50px 0;
+	border-top: 1px solid rgba(255,255,255, .6);
+	text-align: center;
+}
+
